@@ -1,0 +1,3 @@
+include ':skinPlugin'
+include ':app'
+rootProject.name = "CustomizeUI"
