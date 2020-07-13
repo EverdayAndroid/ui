@@ -34,7 +34,7 @@ class SkinManager() : Observable() {
      * 记载皮肤并应用
      * @param skinPath 皮肤路径 如果为空则使用默认皮肤
      */
-    fun loadSkin(skinPath:String){
+    fun loadSkin(skinPath:String?){
         if(skinPath.isNullOrEmpty()){
             SkinPreference.getInstance().reset()
             SkinResources.getInstance().reset()
