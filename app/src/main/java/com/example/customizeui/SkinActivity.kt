@@ -12,7 +12,7 @@ class SkinActivity : AppCompatActivity() {
     }
     fun change(view: View?) {
         //换肤，收包裹，皮肤包是独立的apk包，可以来自网络下载
-        SkinManager.getInstance().loadSkin("/data/data/com.enjoy.skin/skin/skin-debug.apk")
+        SkinManager.getInstance().loadSkin("/data/data/com.example.customizeui/skin/skin-debug.apk")
     }
 
     fun restore(view: View?) {

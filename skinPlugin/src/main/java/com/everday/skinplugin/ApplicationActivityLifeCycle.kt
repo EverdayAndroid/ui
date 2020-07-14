@@ -27,7 +27,6 @@ class ApplicationActivityLifeCycle :Application.ActivityLifecycleCallbacks {
     }
 
     override fun onActivityStarted(activity: Activity) {
-        TODO("Not yet implemented")
     }
 
     override fun onActivityDestroyed(activity: Activity) {
@@ -36,11 +35,9 @@ class ApplicationActivityLifeCycle :Application.ActivityLifecycleCallbacks {
     }
 
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
-        TODO("Not yet implemented")
     }
 
     override fun onActivityStopped(activity: Activity) {
-        TODO("Not yet implemented")
     }
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
@@ -71,7 +68,7 @@ class ApplicationActivityLifeCycle :Application.ActivityLifecycleCallbacks {
                 field.setBoolean(inflater,false)
                 //设置自定义工厂模式
                 val skinLayoutInflaterFactory = SkinLayoutInflaterFactory(activity)
-                val declaredMethod = inflater.javaClass.getDeclaredMethod("forceSetFactory2")
+                val declaredMethod = inflater.getDeclaredMethod("forceSetFactory2",LayoutInflater::class.java,LayoutInflater.Factory2::class.java)
                 declaredMethod.isAccessible = true
                 declaredMethod.invoke(inflater,layoutInflater,skinLayoutInflaterFactory)
                 //记录每个activity对应的工厂
@@ -86,6 +83,5 @@ class ApplicationActivityLifeCycle :Application.ActivityLifecycleCallbacks {
     }
 
     override fun onActivityResumed(activity: Activity) {
-        TODO("Not yet implemented")
     }
 }

@@ -43,8 +43,8 @@ class SkinManager() : Observable() {
             //反射创建AssetManager
             val assetManager = AssetManager::class.java.newInstance()
 
-            val sSystemApkAssets = assetManager.javaClass.getDeclaredField("sSystemApkAssets")
-            sSystemApkAssets.isAccessible = true
+//            val sSystemApkAssets = assetManager.javaClass.getDeclaredField("sSystemApkAssets")
+//            sSystemApkAssets.isAccessible = true
 
             val method = assetManager.javaClass.getMethod("addAssetPath", String::class.java)
             method.invoke(assetManager,skinPath)

@@ -45,7 +45,7 @@ class SkinAttribute {
     @RequiresApi(Build.VERSION_CODES.M)
     fun hook(view:View, attrs:AttributeSet){
         val mSkinPars = ArrayList<SkinPair>()
-        for (index in 0 .. attrs.attributeCount){
+        for (index in 0 until  attrs.attributeCount){
             //获取属性名 src、textColor....
             val attributeName = attrs.getAttributeName(index)
             if(mAttribute.contains(attributeName)){

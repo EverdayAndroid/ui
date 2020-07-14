@@ -38,10 +38,10 @@ class SkinLayoutInflaterFactory :LayoutInflater.Factory2,Observer{
     }
 
     private val mClassPrefixList = arrayListOf<String>(
-        "android.widget",
-        "android.webkit",
-        "android.app",
-        "android.view"
+        "android.widget.",
+        "android.webkit.",
+        "android.app.",
+        "android.view."
     )
 
     @RequiresApi(Build.VERSION_CODES.M)
